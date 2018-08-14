@@ -1,3 +1,4 @@
+const axios = require('axios')
 const usersArray = [
     {
         name: "Chriswf",
@@ -16,7 +17,10 @@ const usersArray = [
     }
 ]
 const getUsers = (req, res) => {
+
     res.status(200).json(usersArray)
+    // axios.get('https://swapi.co/api/planets/1/')
+    // .then(response => res.status(200).json(response.data))
 }
 const updateUser = (req, res) => {
     usersArray[req.body.userIndex].age = req.body.updatedAge
@@ -27,7 +31,6 @@ const createUser = (req, res) => {
     res.status(200).json(usersArray)
 }
 const deleteUser = (req, res) => {
-    console.log(req.params)
     usersArray.splice(req.params.userIndex, 1)
     res.status(200).json(usersArray)
 }
