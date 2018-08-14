@@ -1,9 +1,9 @@
 const express = require('express');
 const cors = require('cors');
 const { json } = require('body-parser');
-const axios = require('axios')
+const axios = require('axios');
 
-const ctrl = require('./ctrl')
+const ctrl = require('./ctrl');
 
 const app = express();
 app.use(cors());
@@ -18,4 +18,4 @@ app.delete('/deleteUser', ctrl.deleteUser);
 
 
 
-app.listen(PORT, console.log(`Tuning in to channel ${PORT}`))
+app.listen(PORT, console.log(`Tuning in to channel ${PORT}`));
