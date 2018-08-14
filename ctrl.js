@@ -15,7 +15,7 @@ const usersArray = [
         age: 30,
         password: "spinsciiswhereiwork"
     }
-]
+];
 const getUsers = (req, res) => {
 
     res.status(200).json(usersArray)
