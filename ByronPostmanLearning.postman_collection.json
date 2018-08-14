@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "1ac5d59c-cde0-438f-b0bd-e14df3fdeecf",
+		"name": "ByronPostmanLearning",
+		"description": "For byron to learn postman stuff.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"_postman_id": "bdf1d0e2-4691-453c-9d51-68e412de6183",
+			"name": "http://localhost:1738/createUser",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"user\": \"Vamsi\",\n\"age\": 83838,\n\"password\": \"goatbrain\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1738/createUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1738",
+					"path": [
+						"createUser"
+					]
+				},
+				"description": "Create user and adds to list"
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "f2111350-6700-4b54-96b5-8d3bd1a852d9",
+			"name": "http://localhost:1738/getUsers",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"user\": \"Vamsi\",\n\"age\": 83838,\n\"password\": \"goatbrain\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1738/getUsers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1738",
+					"path": [
+						"getUsers"
+					]
+				},
+				"description": "Gets the list of users"
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "0b4af866-21b2-40ea-98f6-55f5ff2641f5",
+			"name": "http://localhost:1738/updateUserAge",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"userIndex\": 2,\n\"updatedAge\": 33\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1738/updateUserAge",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1738",
+					"path": [
+						"updateUserAge"
+					]
+				},
+				"description": "Updates a user's age property"
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "5f7e0d03-f011-4a4c-9ed3-e9d30f50a105",
+			"name": "http://localhost:1738/deleteUser",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:1738/deleteUser?userIndex=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1738",
+					"path": [
+						"deleteUser"
+					],
+					"query": [
+						{
+							"key": "userIndex",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Deletes the specified user from the user array"
+			},
+			"response": []
+		}
+	]
+}

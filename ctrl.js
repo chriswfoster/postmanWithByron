@@ -19,6 +19,7 @@ const getUsers = (req, res) => {
     res.status(200).json(usersArray)
 }
 const updateUser = (req, res) => {
+    usersArray[req.body.userIndex].age = req.body.updatedAge
     res.status(200).json(usersArray);
 }
 const createUser = (req, res) => {
@@ -26,8 +27,8 @@ const createUser = (req, res) => {
     res.status(200).json(usersArray)
 }
 const deleteUser = (req, res) => {
-
-
+    console.log(req.params)
+    usersArray.splice(req.params.userIndex, 1)
     res.status(200).json(usersArray)
 }
 

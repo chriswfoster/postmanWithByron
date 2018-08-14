@@ -11,7 +11,7 @@ app.use(json());
 const PORT = 1738;
 
 app.get('/getUsers', ctrl.getUsers);
-app.put('/updateUser', ctrl.updateUser);
+app.put('/updateUserAge', ctrl.updateUser);
 app.post('/createUser', ctrl.createUser);
 app.delete('/deleteUser', ctrl.deleteUser);
 
