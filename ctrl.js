@@ -33,11 +33,11 @@ const createUser = (req, res) => {
 const deleteUser = (req, res) => {
     usersArray.splice(req.params.userIndex, 1)
     res.status(200).json(usersArray)
-}
+};
 
 module.exports = {
     getUsers,
     updateUser,
     createUser,
     deleteUser
-}
+};
