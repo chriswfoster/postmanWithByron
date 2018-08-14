@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 app.use(json());
 
-const PORT = 1739;
+const PORT = 1738;
 
 app.get('/getUsers', ctrl.getUsers);
 app.put('/updateUser', ctrl.updateUser);
